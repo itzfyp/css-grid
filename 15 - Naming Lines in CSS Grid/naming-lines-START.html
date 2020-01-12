@@ -46,8 +46,13 @@
     .container {
       display: grid;
       grid-gap: 20px;
-      grid-template-columns: 1fr 500px 1fr;
-      grid-template-rows: repeat(10, auto);
+      grid-template-columns: [g-c-left] 1fr [g-content-start] 500px [g-content-end] 1fr [g-c-right];
+      grid-template-rows: [g-r-start] repeat(10, auto) [g-r-end];
+    }
+    .item8 {
+      background: slateblue;
+      grid-column: g-content-start;
+      grid-row: g-r-start / g-r-end;
     }
   </style>
 </body>
